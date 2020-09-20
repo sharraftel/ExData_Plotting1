@@ -11,6 +11,6 @@ cutData <- tabledData[tabledData$Date %in% c("1/2/2007","2/2/2007"),]
 fixedtime <-strptime(paste(cutData$Date, cutData$Time, sep=" "),"%d/%m/%Y %H:%M:%S")
 cutData <- cbind(fixedtime,cutData)
 ########## first plot
-#png(file="plot1.png")
+png(file="plot1.png")
 hist(cutData$Global_active_power,col = "red",main="Global Active Power", xlab="Global Active Power (kilowatts)")
-#dev.off()
+dev.off()
